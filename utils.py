@@ -31,7 +31,7 @@ def general_info(data, title: str):
     print('')
 
 
-def revertir_one_hot(data, one_hot_cols, single_col, eliminate_prefix=False):
+def reverse_one_hot(data, one_hot_cols, single_col, eliminate_prefix=False):
     '''This function reverts one-hot encoding'''
     data[single_col] = data[one_hot_cols].idxmax(axis=1)
     data.drop(columns=one_hot_cols, inplace=True)
